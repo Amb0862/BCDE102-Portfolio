@@ -1,45 +1,125 @@
-class Book{
-    constructor(title, author, isbn){
-        this.title = title;
-        this.author = author;
-        this.isbn = isbn;
-        this.available = true;
-    }
-    check_out(title){
-        if(title.available){
-            this.available = false;
-        }
-        else{
-            console.log("the book is unavailable or the book is not in the system.")
-        }
-    }
-    return_book(title){
-        if(! title.available){
-            this.available = true
-        }
-        else{
-            console.log("the book already return or the book is not in the system.")
-        }
-    }
-    toString(){
-        return `title: ${this.title}, author: ${this.author}, isbn: ${this.isbn}, available? ${ this.available}`;
-    }
-};
+class User{
+    constructor(userID, name, email, password,role){
 
-class Library{
-    constructor(){
-        this.allBooks = [];
-        this.allUser = [];
     }
-    add_book(title, author, isbn){
-        const newBook = new Book(title, author, isbn)
-        this.allBooks.push(newBook)
+    registerUser(){
+
     }
-    find_book_by_isbn(isbn){
-        return this.allBooks.find(book => book.isbn === isbn)
+
+    updateUser(){
+
+    }
+    deleteUser(){
+
     }
 }
 
-let book = new Book('The Great Gatsby', 'F. Scott Fitzgerald', '1234567890');
-console.log(Book.toString(book))
-book.check_out('The Great Gatsby')
+class Member{
+    constructor(membershipID){
+        this.borrowedBooks = []
+    }
+    borrowedBooks(){
+
+    }
+
+    returnBook(){
+
+    }
+
+    checkBorrowingStatus(){
+
+    }
+}
+
+class Librarian{
+    constructor(){
+
+    }
+    addBook(){
+
+    }
+    updateBook(){
+
+    }
+    deleteBook(){
+
+    }
+    registerUser(){
+
+    }
+    updateUser(){
+
+    }
+    deleteUser(){
+
+    }
+}
+
+class Book{
+    constructor(bookID, title, author, genre, ISBN, location, description){
+        this.availability = true;
+    }
+    seachBooks(){
+
+    }
+    viewBookDetails(){
+    }
+    //toString(){}
+};
+
+class Catalogue{
+    constructor(){
+        this.books = [];
+    }
+    addBook(){
+
+    }
+    updateBook(){
+
+    }
+    deleteBook(){
+
+    }
+    seachBooks(){
+
+    }
+}
+
+class BorrowingRecord{
+    constructor(recordID, borrowedBook, borrower, borrowDate, dueDate, returnDate, status){
+
+    };
+    createRecord(){
+
+    }
+    updateRecord(){
+
+    }
+    checkOverdue(){
+
+    }
+}
+
+class Notification{
+    constructor(notificationID, user,message, status){
+
+    }
+    sendOverdueNotification(){
+
+    }
+
+}
+class Reservation{
+    constructor(reservationId, reservedBook, reservingMember, reservationDate, status){
+        
+    }
+    createReservation(){
+
+    }
+    cancelReservation(){
+
+    }
+    checkReservationStatus(){
+        
+    }
+}
