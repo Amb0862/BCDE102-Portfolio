@@ -140,9 +140,15 @@ jasmineRequire.HtmlReporter = function(j$) {
           if (toEditStr.search("jasmine.js") === -1) {
             toEditStr = "Look at " + toEditStr.slice(0, toEditStr.lastIndexOf(":"));   
           } else {
+<<<<<<< HEAD
             toEditStr = "Ouch!"
           }
           return toEditStr;
+=======
+            toEditStr = "Ouch!"
+          }
+          return toEditStr;
+>>>>>>> f947d0536b138f2fe791bd82736bb133b1936dc4
         };
         
         for (var i = 0; i < result.failedExpectations.length; i++) {
